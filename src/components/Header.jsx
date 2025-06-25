@@ -12,12 +12,8 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 const theme = createTheme({
     palette: {
         mode: 'light',
-        primary: {
-            main: 'rgba(245, 90, 90, 1)',
-        },
         secondary: {
             main: 'rgba(255, 255, 255, 1)',
-            light: 'rgba(255, 255, 255, 1)'
         }
     },
     typography: {
@@ -66,14 +62,14 @@ function ScrollTop(props) {
 
 export default function Header(props) {
 
-    const logoSize = 50;
+    const logoSize = 45;
 
     return (
         <ThemeProvider theme={theme}>
             <CssBaseline />
-        <AppBar position='fixed' color='secondary' 
+        <AppBar position='fixed' color='secondary'
             sx={{
-            boxShadow: '0 0.15em 0.1em 0 rgba(0, 0, 0, 0.1)' 
+            boxShadow: '0px 1px 3px 0px rgba(0, 0, 0, 0.10), 0px 1px 2px 0px rgba(0, 0, 0, 0.06)',
         }}>
             <Toolbar sx={{
                 display: 'flex', 
@@ -89,7 +85,7 @@ export default function Header(props) {
                 </Typography>
             </Toolbar>
         </AppBar>
-        <Toolbar id="back-to-top-anchor" />
+        <Toolbar id="back-to-top-anchor" sx={{ height: 90 }} />
         <ScrollTop {...props}>
             <Fab size="small" aria-label="scroll back to top">
             <KeyboardArrowUpIcon />
