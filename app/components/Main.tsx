@@ -4,6 +4,7 @@ import React from "react";
 
 export default function Main() {
   const [ingredients, setIngredients] = React.useState<string[]>([]);
+  const minIngredients = 3;
 
   const ingredientList = ingredients.map((ingredient) => (
     <li
@@ -61,16 +62,16 @@ export default function Main() {
           </ul>
           <section className="bg-[#f0efeb] rounded-lg flex items-center justify-between mt-6">
             <div>
-              <h3 className="pl-10 text-lg font-medium text-stone-950">
+              {ingredients.length > minIngredients ? <h3 className="pl-10 pt-4 text-lg font-medium text-stone-950">
                 Pronto pra uma receita?
-              </h3>
-              <p className="pt-2 pl-10 font-normal text-sm text-[#6b7280]">
-                Busque uma receita com sua lista de ingredientes.
+              </h3> : null}
+              <p className="pl-10 py-4 font-normal text-sm text-[#6b7280]">
+                {ingredients.length > minIngredients ? "Busque uma receita com sua lista de ingredientes." : "Adicione pelo menos 4 ingredientes para buscar uma receita."}
               </p>
             </div>
-            <button className="bg-[#d17557] text-white text-sm font-medium py-3 px-6 rounded-lg flex items-center whitespace-nowrap m-10 hover:bg-amber-600 active:scale-95 transition-all duration-150 shadow-sm/20 hover:shadow-md/20">
+            {ingredients.length > minIngredients ? <button className="bg-[#d17557] text-white text-sm font-medium py-3 px-6 rounded-lg flex items-center whitespace-nowrap m-10 hover:bg-amber-600 active:scale-95 transition-all duration-150 shadow-sm/20 hover:shadow-md/20">
               Ver receita
-            </button>
+            </button> : null}
           </section>
         </section>
       )}
