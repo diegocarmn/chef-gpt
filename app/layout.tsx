@@ -11,9 +11,9 @@ export default function RootLayout({
   return (
     <html lang="pt-br" className={inter.className}>
       <head>
-        <title>Chef GPT</title>
+        <title>SaborIA</title>
         <meta name="description" content="" />
-        <link rel="icon" href='/chef-gpt-icon.png' />
+        <link rel="icon" href='/saboria-icon.svg' />
       </head>
       <body>
         {children}

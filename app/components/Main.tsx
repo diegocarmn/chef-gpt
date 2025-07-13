@@ -16,26 +16,37 @@ export default function Main() {
 
   function addIngredient(formData: FormData) {
     const ingredient = formData.get("ingredient") as string;
+    if (!ingredient) return;
     setIngredients((prevIngredients) => [...prevIngredients, ingredient]);
   }
 
   return (
     <main className="bg-stone-50 min-h-[calc(100vh-6rem)]">
+      {ingredients.length === 0 && (
+        <section className="text-center pt-10">
+          <h2 className="text-2xl font-semibold text-stone-950 mb-2">
+            Descubra uma receita com o que você já tem!
+          </h2>
+          <p className="font-normal text-sm text-[#6b7280]">
+            Digite os ingredientes que você tem em casa e a SaborIA cria uma receita deliciosa! 
+          </p>
+        </section>
+      )}
       <form
         action={addIngredient}
-        className="pt-18 gap-3 px-5 flex justify-center mx-auto"
+        className="pt-10 gap-3 px-5 flex justify-center mx-auto"
       >
         <input
           type="text"
           name="ingredient"
           maxLength={50}
-          className="h-10 bg-white rounded p-3 w-[400px] rounded-lg border border-stone-400 shadow-sm focus:outline-none focus:border-stone-500 "
+          className="h-10 bg-white rounded p-3 w-[400px] rounded-lg border border-stone-400 shadow-sm focus:outline-none focus:border-stone-500"
           placeholder="ex. atum"
           aria-label="Digite um ingrediente"
         />
         <button
           type="submit"
-          className="bg-stone-950 text-white text-sm font-medium py-2 px-12 rounded-lg flex items-center whitespace-nowrap w-[]"
+          className="bg-stone-950 text-white text-sm font-medium py-2 px-12 rounded-lg flex items-center whitespace-nowrap shadow-sm/20 hover:shadow-md/20 hover:bg-stone-800 active:scale-95 transition-all duration-150"
         >
           + Adicionar
         </button>
@@ -43,7 +54,7 @@ export default function Main() {
       {ingredients.length > 0 && (
         <section className="mt-12 mx-auto flex flex-col max-w-[620px] px-5">
           <h2 className="text-3xl font-semibold text-stone-950 mb-6">
-            Ingredients on hand:
+            Ingredientes disponíveis:
           </h2>
           <ul className="list-disc list-inside max-w-148 break-all">
             {ingredientList}
@@ -51,14 +62,14 @@ export default function Main() {
           <section className="bg-[#f0efeb] rounded-lg flex items-center justify-between mt-6">
             <div>
               <h3 className="pl-10 text-lg font-medium text-stone-950">
-                Ready for a recipe?
+                Pronto pra uma receita?
               </h3>
               <p className="pt-2 pl-10 font-normal text-sm text-[#6b7280]">
-                Generate a recipe from your list of ingredients.
+                Busque uma receita com sua lista de ingredientes.
               </p>
             </div>
-            <button className="bg-[#d17557] text-white text-sm font-medium py-3 px-6 rounded-lg flex items-center whitespace-nowrap m-10">
-              Get a recipe
+            <button className="bg-[#d17557] text-white text-sm font-medium py-3 px-6 rounded-lg flex items-center whitespace-nowrap m-10 hover:bg-amber-600 active:scale-95 transition-all duration-150 shadow-sm/20 hover:shadow-md/20">
+              Ver receita
             </button>
           </section>
         </section>
