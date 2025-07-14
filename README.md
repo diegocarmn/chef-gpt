@@ -3,19 +3,17 @@
 ## 🔍 Sobre
 Um assistente inteligente para criação de receitas culinárias, alimentado por IA, que transforma ingredientes que você tem em casa em pratos incríveis!
 
-SaborIA é um app moderno construído com **Next.js**, **React**, e **Tailwind CSS** (v4.1), integrando APIs de Inteligência Artificial para gerar receitas personalizadas a partir dos ingredientes que você tem em casa.
+SaborIA é um app moderno construído com **Next.js**, **React**, e **Tailwind CSS** (v4.1), integrando API de Inteligência Artificial para gerar receitas personalizadas a partir dos ingredientes que você tem em casa.
 
 ---
 
 ## ⚙️ Tecnologias
 
-![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white)
-![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwind-css&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
-![Huggingface](https://img.shields.io/badge/Huggingface-F9900F?style=for-the-badge&logo=huggingface&logoColor=white)
-![ESLint](https://img.shields.io/badge/ESLint-4B32C3?style=for-the-badge&logo=eslint&logoColor=white)
-
+- [Next.js (App Router)](https://nextjs.org/)
+- [React](https://react.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Groq API](https://console.groq.com/) – para geração de texto com IA
 ---
 
 ## 🚀 Deploy

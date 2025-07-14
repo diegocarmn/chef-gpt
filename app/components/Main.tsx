@@ -2,7 +2,7 @@
 
 import React from "react";
 import IngredientsList from "./IngredientsList";
-import ClaudeRecipe from "./CloudeRecipe";
+import ClaudeRecipe from "./AiRecipe";
 import { getRecipeFromGroq } from "../actions/ai";
 
 export default function Main() {
@@ -66,7 +66,7 @@ export default function Main() {
       )}
       {loading && (
         <section className="text-center py-10">
-          <p className="text-lg font-semibold text-stone-950">
+          <p className="text-lg font-semibold text-[#475467]">
             Buscando uma receita...
           </p>
         </section>
