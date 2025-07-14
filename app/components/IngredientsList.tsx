@@ -1,5 +1,3 @@
-import { getRecipeFromMistral } from "../actions/ai";
-
 export default function IngredientsList(props: {
   list: string[];
   getRecipe: () => void;
