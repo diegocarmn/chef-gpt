@@ -3,7 +3,7 @@
 import React from "react";
 import IngredientsList from "./IngredientsList";
 import ClaudeRecipe from "./CloudeRecipe";
-import { getRecipeFromMistral } from "../actions/ai";
+import { getRecipeFromGroq } from "../actions/ai";
 
 export default function Main() {
   const [ingredients, setIngredients] = React.useState<string[]>([]);
@@ -17,10 +17,16 @@ export default function Main() {
   }
 
   async function getRecipe() {
-    setLoading(true);
-    const generatedRecipeMarkdown = await getRecipeFromMistral(ingredients);
-    setLoading(false);
-    setRecipe(generatedRecipeMarkdown ?? "");
+    try {
+      setLoading(true);
+      const generatedRecipeMarkdown = await getRecipeFromGroq(ingredients);
+      setRecipe(generatedRecipeMarkdown ?? "");
+    } catch (error) {
+      console.error("Erro ao buscar receita:", error);
+      setRecipe("Houve um problema ao gerar a receita. Tente novamente.");
+    } finally {
+      setLoading(false);
+    }
   }
 
   return (
