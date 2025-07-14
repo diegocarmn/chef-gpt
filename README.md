@@ -46,6 +46,15 @@ Veja como a SaborIA traz uma experiência intuitiva e elegante para transformar 
 
 ---
 
+
+## 🎨 Design no Figma
+
+O layout deste projeto foi inspirado neste modelo do Figma:
+
+🔗 [Modelo no Figma](https://www.figma.com/design/73iyU720zWmrWgJsok5tYE/Chef-Claude?node-id=0-1&p=f&t=PEKl1YVeICuJDXBX-0)
+
+---
+
 ## 🛠️ Como rodar localmente
 
 1. Clone o repositório  
