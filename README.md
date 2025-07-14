@@ -1,36 +1,79 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# SaborIA 🍳🤖
 
-## Getting Started
+## 🔍 Sobre
+Um assistente inteligente para criação de receitas culinárias, alimentado por IA, que transforma ingredientes que você tem em casa em pratos incríveis!
 
-First, run the development server:
+SaborIA é um app moderno construído com **Next.js**, **React**, e **Tailwind CSS** (v4.1), integrando APIs de Inteligência Artificial para gerar receitas personalizadas a partir dos ingredientes que você tem em casa.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ⚙️ Tecnologias
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white)
+![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![Huggingface](https://img.shields.io/badge/Huggingface-F9900F?style=for-the-badge&logo=huggingface&logoColor=white)
+![ESLint](https://img.shields.io/badge/ESLint-4B32C3?style=for-the-badge&logo=eslint&logoColor=white)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🚀 Deploy
 
-To learn more about Next.js, take a look at the following resources:
+O projeto está hospedado e disponível para uso em:  
+[https://saboria.netlify.app](https://saboria.netlify.app)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📸 Preview
 
-## Deploy on Vercel
+Veja como a SaborIA traz uma experiência intuitiva e elegante para transformar ingredientes em receitas deliciosas.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+<div align="center">
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+<img src="public/preview01.png" alt="Homepage SaborIA" width="600" style="margin-bottom: 1rem;" />
+
+<img src="public/preview02.png" alt="Resultado da receita" width="600" style="margin-bottom: 1rem;" />
+
+</div>
+
+---
+
+## 🎯 Funcionalidades
+
+- Entrada simples de ingredientes  
+- Geração dinâmica e inteligente de receitas  
+- Layout responsivo  
+- Estilização elegante com Tailwind e plugin Typography  
+
+---
+
+## 🛠️ Como rodar localmente
+
+1. Clone o repositório  
+
+    ```bash
+    git clone https://github.com/diegocarmn/saboria.git
+    cd saboria
+2. Instale as dependências
+
+    ```bash
+    npm install
+3. Configure suas variáveis de ambiente (exemplo .env.local)
+    ```bash
+    NEXT_PUBLIC_API_KEY=sua_chave_aqui
+4. Rode o servidor de desenvolvimento
+    ```bash
+    npm run dev
+5. Abra http://localhost:3000 para ver o app no navegador.
+
+---
+
+## 📄 Licença
+![MIT License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+
+Veja o arquivo [LICENSE](./LICENSE) para mais detalhes.
+
+---
+
+✨ Desenvolvido com 💜 por Diego Carmona
