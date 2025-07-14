@@ -8,6 +8,7 @@ import { getRecipeFromMistral } from "../actions/ai";
 export default function Main() {
   const [ingredients, setIngredients] = React.useState<string[]>([]);
   const [recipe, setRecipe] = React.useState("");
+  const [loading, setLoading] = React.useState(false);
 
   function addIngredient(formData: FormData) {
     const ingredient = formData.get("ingredient") as string;
@@ -16,7 +17,9 @@ export default function Main() {
   }
 
   async function getRecipe() {
+    setLoading(true);
     const generatedRecipeMarkdown = await getRecipeFromMistral(ingredients);
+    setLoading(false);
     setRecipe(generatedRecipeMarkdown ?? "");
   }
 
@@ -54,6 +57,13 @@ export default function Main() {
       </form>
       {ingredients.length > 0 && (
         <IngredientsList list={ingredients} getRecipe={getRecipe} />
+      )}
+      {loading && (
+        <section className="text-center py-10">
+          <p className="text-lg font-semibold text-stone-950">
+            Buscando uma receita...
+          </p>
+        </section>
       )}
       {recipe ? <ClaudeRecipe recipe={recipe} /> : null}
     </main>
