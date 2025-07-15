@@ -1,4 +1,7 @@
-# SaborIA 🍳🤖
+<h1 align="center">🤖 SaborIA</h1>
+<p align="center">
+  <a href="https://diegocarmn.github.io/tecmides/">🌐 Acesse o site</a>
+</p>
 
 ## 🔍 Sobre
 Um assistente inteligente para criação de receitas culinárias, alimentado por IA, que transforma ingredientes que você tem em casa em pratos incríveis!
