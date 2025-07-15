@@ -1,4 +1,7 @@
-# SaborIA 🍳🤖
+<h1 align="center">🤖 SaborIA</h1>
+<p align="center">
+  <a href="https://saboria.netlify.app">🌐 Acesse o site</a>
+</p>
 
 ## 🔍 Sobre
 Um assistente inteligente para criação de receitas culinárias, alimentado por IA, que transforma ingredientes que você tem em casa em pratos incríveis!
@@ -68,7 +71,7 @@ O layout deste projeto foi inspirado neste modelo do Figma:
     npm install
 3. Configure suas variáveis de ambiente (exemplo .env.local)
     ```bash
-    NEXT_PUBLIC_API_KEY=sua_chave_aqui
+    GROQ_API_KEY=sua_chave_aqui
 4. Rode o servidor de desenvolvimento
     ```bash
     npm run dev
@@ -83,4 +86,4 @@ Veja o arquivo [LICENSE](./LICENSE) para mais detalhes.
 
 ---
 
-✨ Desenvolvido com 💜 por Diego Carmona
+Desenvolvido com 💜 por Diego Carmona
