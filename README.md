@@ -1,6 +1,6 @@
 <h1 align="center">🤖 SaborIA</h1>
 <p align="center">
-  <a href="https://diegocarmn.github.io/tecmides/">🌐 Acesse o site</a>
+  <a href="https://saboria.netlify.app">🌐 Acesse o site</a>
 </p>
 
 ## 🔍 Sobre
