@@ -32,7 +32,7 @@ export default function Main() {
   return (
     <main className="bg-stone-50 min-h-[calc(100vh-6rem)]">
       {ingredients.length === 0 && (
-        <section className="text-center pt-10">
+        <section className="text-center pt-10 px-5">
           <h2 className="text-2xl font-semibold text-stone-950 mb-2">
             Descubra uma receita com o que você já tem!
           </h2>
@@ -44,19 +44,19 @@ export default function Main() {
       )}
       <form
         action={addIngredient}
-        className="pt-10 gap-3 px-5 flex justify-center mx-auto"
+        className="pt-10 md:gap-3 px-5 justify-items-center md:flex justify-center mx-auto"
       >
         <input
           type="text"
           name="ingredient"
           maxLength={50}
-          className="h-10 bg-white rounded p-3 w-[400px] rounded-lg border border-stone-400 shadow-sm focus:outline-none focus:border-stone-500"
+          className="mb-4 md:mb-0 h-10 bg-white rounded p-3 w-full md:w-[400px] rounded-lg border border-stone-400 shadow-sm focus:outline-none focus:border-stone-500"
           placeholder="ex. atum"
           aria-label="Digite um ingrediente"
         />
         <button
           type="submit"
-          className="bg-stone-950 text-white text-sm font-medium py-2 px-12 rounded-lg flex items-center whitespace-nowrap shadow-sm/20 hover:shadow-md/20 hover:bg-stone-800 active:scale-95 transition-all duration-150"
+          className="bg-stone-950 text-white text-sm font-medium py-3 md:py-2 px-12 rounded-lg flex items-center whitespace-nowrap shadow-sm/20 hover:shadow-md/20 hover:bg-stone-800 active:scale-95 transition-all duration-150"
         >
           + Adicionar
         </button>
