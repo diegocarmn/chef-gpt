@@ -2,13 +2,20 @@
 
 import React from "react";
 import IngredientsList from "./IngredientsList";
-import ClaudeRecipe from "./AiRecipe";
+import AiRecipe from "./AiRecipe";
 import { getRecipeFromGroq } from "../actions/ai";
 
 export default function Main() {
   const [ingredients, setIngredients] = React.useState<string[]>([]);
   const [recipe, setRecipe] = React.useState("");
   const [loading, setLoading] = React.useState(false);
+  const recipeSectionRef = React.useRef<HTMLDivElement>(null);
+
+  React.useEffect(() => {
+    if (recipeSectionRef.current !== null && recipe !== "") {
+      recipeSectionRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [recipe]);
 
   function addIngredient(formData: FormData) {
     const ingredient = formData.get("ingredient") as string;
@@ -50,7 +57,7 @@ export default function Main() {
           type="text"
           name="ingredient"
           maxLength={50}
-          className="mb-4 md:mb-0 h-10 bg-white rounded p-3 w-full md:w-[400px] rounded-lg border border-stone-400 shadow-sm focus:outline-none focus:border-stone-500"
+          className="mb-4 md:mb-0 h-10 bg-white p-3 w-full md:w-[400px] rounded-lg border border-stone-400 shadow-sm focus:outline-none focus:border-stone-500"
           placeholder="ex. atum"
           aria-label="Digite um ingrediente"
         />
@@ -71,7 +78,7 @@ export default function Main() {
           </p>
         </section>
       )}
-      {recipe ? <ClaudeRecipe recipe={recipe} /> : null}
+      {recipe ? <AiRecipe recipe={recipe} ref={recipeSectionRef} /> : null}
     </main>
   );
 }

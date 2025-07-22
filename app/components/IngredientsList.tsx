@@ -1,6 +1,7 @@
 export default function IngredientsList(props: {
   list: string[];
   getRecipe: () => void;
+  ref?: React.RefObject<HTMLDivElement | null>;
 }) {
   const minIngredients = 3;
   let id = 0;
@@ -22,7 +23,7 @@ export default function IngredientsList(props: {
       <ul className="list-disc list-inside max-w-148 break-all">
         {ingredientList}
       </ul>
-      <section className="bg-[#f0efeb] rounded-lg text-center md:text-left md:flex items-center justify-between my-5">
+      <section ref={null} className="bg-[#f0efeb] rounded-lg text-center md:text-left md:flex items-center justify-between my-5">
         <div>
           {props.list.length > minIngredients ? (
             <h3 className="md:pl-10 pt-4 text-lg font-medium text-stone-950">

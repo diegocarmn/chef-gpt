@@ -1,8 +1,8 @@
 import ReactMarkdown from "react-markdown";
 
-export default function AiRecipe(props: { recipe: string }) {
+export default function AiRecipe(props: { recipe: string, ref?: React.RefObject<HTMLDivElement | null> }) {
   return (
-    <section className="px-5 pb-5 md:py-10 max-w-148 mx-auto" aria-live="polite">
+    <section ref={props.ref} className="px-5 pb-5 md:py-10 max-w-148 mx-auto" aria-live="polite">
       <h2 className="text-3xl font-semibold text-stone-950 mb-6">
         Recomendação de receita:
       </h2>
